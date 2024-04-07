@@ -17,7 +17,7 @@ class SyTHNR:
         self.account = Account.from_key(self.priv)
         self.SyUSD_sourceCurrencyKey = '0x7355534400000000000000000000000000000000000000000000000000000000'
         self.amountIn = int(amountIn*10**18)
-        self.additionalGas = 50000
+        self.additionalGas = connect.to_wei('0.0003','gwei')
         self.amountOut = 0
         self.bridgeName = '0x4c617965725a65726f0000000000000000000000000000000000000000000000'
         self.chainId = 0

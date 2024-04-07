@@ -17,6 +17,7 @@ class SyTHNR:
         self.account = Account.from_key(self.priv)
         self.SyUSD_sourceCurrencyKey = '0x7355534400000000000000000000000000000000000000000000000000000000'
         self.amountIn = int(amountIn*10**18)
+        self.additionalGas = 50000
         self.amountOut = 0
         self.bridgeName = '0x4c617965725a65726f0000000000000000000000000000000000000000000000'
         self.chainId = 0
@@ -29,6 +30,7 @@ class SyTHNR:
         
         if user_balance >= self.amountIn :
             try:
+                gasPrice = connect.eth.get_block('latest')['baseFeePerGas']
                 transaction = Router.functions.exchangeAtomically(
                     self.SyUSD_sourceCurrencyKey,
                     self.amountIn,
@@ -40,7 +42,7 @@ class SyTHNR:
                 ).build_transaction({
                     'from': self.account.address,
                     'gas': 500000,
-                    'gasPrice': connect.to_wei('0.2','gwei'),
+                    'gasPrice': gasPrice + self.additonalGas,
                     'nonce': connect.eth.get_transaction_count(self.account.address)
                 })
 
@@ -65,6 +67,7 @@ class SyTHNR:
 
         if user_balance >= self.amountIn :
             try:
+                gasPrice = connect.eth.get_block('latest')['baseFeePerGas']
                 transaction = Router.functions.exchangeAtomically(
                         self.SyUSD_sourceCurrencyKey,
                         self.amountIn,
@@ -77,7 +80,7 @@ class SyTHNR:
                         'from': self.account.address,
                         'value': connect.to_wei('0.0007','ether'),
                         'gas': 700000,
-                        'gasPrice': connect.to_wei('1.6','gwei'),
+                        'gasPrice': gasPrice + self.additionalGas,
                         'nonce': connect.eth.get_transaction_count(self.account.address)
                     })
                 
@@ -103,6 +106,7 @@ class SyTHNR:
 
         if user_balance >= amountIn:
             try:
+                gasPrice = connect.eth.get_block('latest')['baseFeePerGas']
                 transaction = Router.functions.bridgeSynth(
                     self.account.address,
                     self.SyUSD_sourceCurrencyKey,
@@ -114,7 +118,7 @@ class SyTHNR:
                     'from': self.account.address,
                     'value': connect.to_wei('0.0007','ether'),
                     'gas': 700000,
-                    'gasPrice': connect.to_wei('1.6','gwei'),
+                    'gasPrice': gasPrice + self.additionalGas,
                     'nonce': connect.eth.get_transaction_count(self.account.address)
 
                 })

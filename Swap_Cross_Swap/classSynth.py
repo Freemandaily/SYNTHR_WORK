@@ -4,8 +4,8 @@ import telegram,asyncio
 from telegram.constants import ParseMode
 import synth_Abi
 
-
-connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/d049a2241d97413da17d774171eb0edb'))
+INFURA_KEY = 'YOUR_INFURA_KEY'
+connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/INFURA_KEY'))
 
 SyUSD_CONTRACT = connect.eth.contract(address=connect.to_checksum_address(synth_Abi.SyUSD_ADDRESS),abi=synth_Abi.BASIC_TOKEN_ABI)
 
@@ -137,7 +137,8 @@ class SyTHNR:
     
     # Alert
     def Alert(self,hash,walletNumber):
-        bot_token = '6348189496:AAEa_9d8h-FPAG_OICpIq6rV8E0k3roPhvY'
+        bot_token = 'YOUR_TELEGRAM_BOT_TOKEN'
+        CHAT_ID = 'YOUR TELEGRAM CHAT_ID'
         hash_link = f'https://sepolia.arbiscan.io/tx/{hash.hex()}'
         trade_info =  f' ALL SYNTHR TRANSCTIONS SUCCESFULLY POSTED \n\n'\
                       f'WALLET: {walletNumber}\n\n'\
@@ -148,20 +149,21 @@ class SyTHNR:
             except:
                 bot = telegram.Bot(bot_token)
             async with bot:
-                await bot.send_message(text=trade_info,parse_mode=ParseMode.HTML,chat_id=963648721)
+                await bot.send_message(text=trade_info,parse_mode=ParseMode.HTML,chat_id=CHAT_ID)
         if __name__!='__main__':
             asyncio.run(main())
       
    # For failed Trade
     def failedTrade(self,e,action):
-        bot_token = '6344573464:AAF_dIkl-hJ5aFT_f0IbUMCmwtOhIm41tvc'
+        bot_token = 'YOUR_TELEGRAM_BOT_TOKEN'
+        CHAT_ID = 'YOUR TELEGRAM CHAT_ID'
         async def main():
             try:
                 bot = telegram.Bot(bot_token)
             except:
                 bot = telegram.Bot(bot_token)
             async with bot:
-                await bot.send_message(text=f'UNABLE TO POST TRANSACTION\n\nActiom:{action}\n\nERROR: {e}',chat_id=963648721)
+                await bot.send_message(text=f'UNABLE TO POST TRANSACTION\n\nActiom:{action}\n\nERROR: {e}',chat_id=CHAT_ID)
         if __name__!='__main__':
             asyncio.run(main())
 

@@ -1,6 +1,6 @@
 ### SYNTHR_WORK
 This is an experimental program for interacting with Synthr testnet project. Treat this script as an educational work rather than otherwise.
-(Synthr_twitter)[https://twitter.com/synthr_defi]
+[Synthr_twitter](https://twitter.com/synthr_defi)
 
 ### Requrements
 - web3 ( pip install web3)

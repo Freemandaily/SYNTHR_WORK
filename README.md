@@ -19,7 +19,7 @@ Setting your private key as environment variable:
 - Linux : export arbitrumBot_1='YOUR_PRIVATE_KEY'
 - Window: setx arbitrumBot_1='YOUR_PRIVATE_KEY'
 
-  ## WANT MANY ACCOUTS
+  ### WANT MANY ACCOUTS
   Currently the the bot is set to only one account but you can modify to accomdate max of 4 accounts,  inside inside `synth_divider.py` module uncomment thoose #subprocess.Popen(['python3','mainSynth.py','arbitrumBot_..']) as per your numer of account you want, but remeber to set the environment variable as per the account.<br>
-
-  for seconnd
+  #### Example
+  for seconnd account , export arbitrumBot_2='ANOTHER_PRIVATE_KEY'

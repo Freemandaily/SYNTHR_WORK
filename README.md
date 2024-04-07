@@ -6,7 +6,7 @@ This is an experimental program for interacting with Synthr testnet project. Tre
 - telegram ( pip install python-telegram-bot)
 
 ## Note:
-- You have to get your telegram bot token and your infura api key ready ( getting this two is simple, just google search them for guide)
+- You have to get your telegram bot token,telegram chat id and your infura api key ready ( getting this two is simple, just google search them for guide)
 
 ## CONFIGURATION
 #### FOR SCRIPT IN (Swap_Cross_swap) folder

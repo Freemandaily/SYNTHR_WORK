@@ -5,7 +5,7 @@ from telegram.constants import ParseMode
 import synth_Abi
 
 INFURA_KEY = 'YOUR_INFURA_KEY'
-connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/INFURA_KEY'))
+connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/{INFURA_KEY}'))
 
 SyUSD_CONTRACT = connect.eth.contract(address=connect.to_checksum_address(synth_Abi.SyUSD_ADDRESS),abi=synth_Abi.BASIC_TOKEN_ABI)
 

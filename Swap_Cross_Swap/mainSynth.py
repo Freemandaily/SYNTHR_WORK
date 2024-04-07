@@ -5,8 +5,8 @@ import time,os,sys,random
 import synth_Abi
 from classSynth import SyTHNR
 
-print('UPDATED_4')
-connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/d049a2241d97413da17d774171eb0edb'))
+INFURA_KEY = 'YOUR_INFURA_KEY'
+connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/{INFURA_KEY}'))
 print(connect.is_connected())
 
 # TOKEN AND CONTRACTS USED 

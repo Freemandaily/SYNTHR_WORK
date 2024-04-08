@@ -25,6 +25,6 @@ Setting your private key as environment variable:
   #### Example
   for seconnd account , export arbitrumBot_2='ANOTHER_PRIVATE_KEY'
 ### STARTING THE SCRIPT
-python3 synth_divider.py
-or
+python3 synth_divider.py <br>
+or <br>
 python synth_divider.py

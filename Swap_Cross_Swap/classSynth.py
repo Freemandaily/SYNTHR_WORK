@@ -41,7 +41,7 @@ class SyTHNR:
                     self.erc20Payment
                 ).build_transaction({
                     'from': self.account.address,
-                    'gas': 500000,
+                    'gas': 2000000,
                     'gasPrice': gasPrice + self.additonalGas,
                     'nonce': connect.eth.get_transaction_count(self.account.address)
                 })
@@ -78,8 +78,8 @@ class SyTHNR:
                         self.erc20Payment
                     ).build_transaction({
                         'from': self.account.address,
-                        'value': connect.to_wei('0.0007','ether'),
-                        'gas': 700000,
+                        'value': connect.to_wei('0.00125','ether'),
+                        'gas': 2000000,
                         'gasPrice': gasPrice + self.additionalGas,
                         'nonce': connect.eth.get_transaction_count(self.account.address)
                     })
@@ -116,8 +116,8 @@ class SyTHNR:
                     self.erc20Payment
                 ).build_transaction({
                     'from': self.account.address,
-                    'value': connect.to_wei('0.0007','ether'),
-                    'gas': 700000,
+                    'value': connect.to_wei('0.00125','ether'),
+                    'gas': 2000000,
                     'gasPrice': gasPrice + self.additionalGas,
                     'nonce': connect.eth.get_transaction_count(self.account.address)
 

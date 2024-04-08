@@ -24,3 +24,7 @@ Setting your private key as environment variable:
   Currently the the bot is set to only one account but you can modify to accomdate max of 4 accounts,  inside `synth_divider.py` module uncomment thoose #subprocess.Popen(['python3','mainSynth.py','arbitrumBot_..']) as per your number of account you want, but remeber to set the environment variable as per the account.<br>
   #### Example
   for seconnd account , export arbitrumBot_2='ANOTHER_PRIVATE_KEY'
+### STARTING THE SCRIPT
+python3 synth_divider.py
+or
+python synth_divider.py

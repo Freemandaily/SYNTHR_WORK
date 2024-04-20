@@ -23,7 +23,7 @@ destination_list = [ SyBNB_destinationCurrencyKey,SyAVAX_destinationCurrencyKey 
 
 hashes = [ ]
 def Action(priv,wallet_number):
-    number_of_swap = random.choice([3,3])
+    number_of_swap = random.choice([2,2])
     destination = random.sample(destination_list,number_of_swap)
     amountIn = random.choice(amount_In_list)
     processor = SyTHNR(priv,amountIn) 

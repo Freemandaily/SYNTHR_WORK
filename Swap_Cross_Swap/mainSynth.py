@@ -19,7 +19,7 @@ SyAVAX_destinationCurrencyKey = '0x734156415800000000000000000000000000000000000
 SyMATIC_destinationCurrencyKey = '0x734d617469630000000000000000000000000000000000000000000000000000'
 
 amount_In_list = [10,9,5,7]
-destination_list = [ SyBNB_destinationCurrencyKey,SyAVAX_destinationCurrencyKey]     #,SyMATIC_destinationCurrencyKey]
+destination_list = [ SyBNB_destinationCurrencyKey,SyAVAX_destinationCurrencyKey ]     #,SyMATIC_destinationCurrencyKey]
 
 hashes = [ ]
 def Action(priv,wallet_number):

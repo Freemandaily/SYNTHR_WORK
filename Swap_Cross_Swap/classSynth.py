@@ -80,7 +80,7 @@ class SyTHNR:
                         'from': self.account.address,
                         'value': connect.to_wei('0.00125','ether'),
                         'gas': 2000000,
-                        'gasPrice':'gasPrice': connect.t0_wei('5','gwei'),
+                        'gasPrice': connect.t0_wei('5','gwei'),
                         'nonce': connect.eth.get_transaction_count(self.account.address)
                     })
                 
@@ -118,7 +118,7 @@ class SyTHNR:
                     'from': self.account.address,
                     'value': connect.to_wei('0.00125','ether'),
                     'gas': 2000000,
-                    'gasPrice': 'gasPrice': connect.t0_wei('5','gwei'),
+                    'gasPrice': connect.t0_wei('5','gwei'),
                     'nonce': connect.eth.get_transaction_count(self.account.address)
 
                 })

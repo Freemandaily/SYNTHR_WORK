@@ -6,7 +6,7 @@ import synth_Abi
 from classSynth import SyTHNR
 
 INFURA_KEY = 'YOUR_INFURA_KEY'
-connect = Web3(Web3.HTTPProvider('https://arbitrum-sepolia.infura.io/v3/{INFURA_KEY}'))
+connect = Web3(Web3.HTTPProvider(f'https://arbitrum-sepolia.infura.io/v3/{INFURA_KEY}'))
 print(connect.is_connected())
 
 # TOKEN AND CONTRACTS USED 

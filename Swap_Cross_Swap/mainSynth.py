@@ -56,7 +56,7 @@ def Action(priv,wallet_number):
                     chainId = 10109
                     hash = processor.CrossChainSwap(connect,SWAP_ROUTER,chain,chainId)
                     hashes.append(hash)
-                print('Waiting for 10 seconds before swapping another')
+                print('Waiting for 15 seconds before swapping another')
                 time.sleep(5)
             except:
                 pass

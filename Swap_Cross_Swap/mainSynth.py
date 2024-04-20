@@ -18,8 +18,8 @@ SyBNB_destinationCurrencyKey = '0x73424e4200000000000000000000000000000000000000
 SyAVAX_destinationCurrencyKey = '0x7341564158000000000000000000000000000000000000000000000000000000'
 SyMATIC_destinationCurrencyKey = '0x734d617469630000000000000000000000000000000000000000000000000000'
 
-amount_In_list = [40,20,40,30]
-destination_list = [ SyBNB_destinationCurrencyKey,SyAVAX_destinationCurrencyKey,SyMATIC_destinationCurrencyKey]
+amount_In_list = [10,9,5,7]
+destination_list = [ SyBNB_destinationCurrencyKey,SyAVAX_destinationCurrencyKey]     #,SyMATIC_destinationCurrencyKey]
 
 hashes = [ ]
 def Action(priv,wallet_number):
@@ -65,7 +65,7 @@ def Action(priv,wallet_number):
     # Bridging
     def Bridge():
         for chain in destination_list:
-            amount_in_list = [20,40,20,30]
+            amount_in_list = [7,8,9,5]
             try:
                 amount_in = random.choice(amount_in_list)
                 if chain == SyBNB_destinationCurrencyKey:
